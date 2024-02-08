@@ -38,16 +38,50 @@ function App() {
     const body = document.querySelector("body");
 
     if (body) {
-      body.classList.remove("rain", "clouds", "sun");
+      body.classList.remove(
+        "rain",
+        "cloud",
+        "sun",
+        "cloud",
+        "overcast",
+        "mist",
+        "snow",
+        "fog",
+        "sleet",
+        "drizzle",
+        "mist"
+      );
 
       if (weatherCondition.toLowerCase().includes("rain")) {
         body.classList.add("rain");
       }
       if (weatherCondition.toLowerCase().includes("sun")) {
         body.classList.add("sun");
-      } else if (weatherCondition.toLowerCase().includes("cloud")) {
-        body.classList.add("clouds");
       }
+      if (weatherCondition.toLowerCase().includes("cloud")) {
+        body.classList.add("cloud");
+      }
+      if (weatherCondition.toLowerCase().includes("overcast")) {
+        body.classList.add("overcast");
+      }
+      if (weatherCondition.toLowerCase().includes("mist")) {
+        body.classList.add("mist");
+      }
+      if (weatherCondition.toLowerCase().includes("snow")) {
+        body.classList.add("snow");
+      }
+      if (weatherCondition.toLowerCase().includes("fog")) {
+        body.classList.add("fog");
+      }
+      if (weatherCondition.toLowerCase().includes("sleet")) {
+        body.classList.add("sleet");
+      }
+      if (weatherCondition.toLowerCase().includes("drizzle")) {
+        body.classList.add("drizzle");
+      } else if (weatherCondition.toLowerCase().includes("mist")) {
+        body.classList.add("mist");
+      }
+
       // TODO: Add more conditions for different weather types
     }
   };
